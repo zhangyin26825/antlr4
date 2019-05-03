@@ -1,0 +1,17 @@
+*.classpath
+*.project
+*.log
+.settings/
+target/
+lib/
+classes/
+.idea/
+*.iml
+*.ipr
+*.iws
+asset-managemetn-api/target/
+core/target/
+update-config.properties
+mvnw
+mvnw.cmd
+application.properties
