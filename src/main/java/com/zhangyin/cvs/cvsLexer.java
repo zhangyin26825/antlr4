@@ -79,6 +79,9 @@ public class cvsLexer extends Lexer {
 	}
 
 
+	int count = 0;
+
+
 	public cvsLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);

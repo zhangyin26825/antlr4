@@ -56,6 +56,14 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+                    <atn>true</atn>
+                    <!--<excludes></excludes>-->
+                    <visitor>true</visitor>
+                    <outputDirectory>src/main/java/com/zhangyin/cvs</outputDirectory>
+                    <listener>true</listener>
+                    <treatWarningsAsErrors>true</treatWarningsAsErrors>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

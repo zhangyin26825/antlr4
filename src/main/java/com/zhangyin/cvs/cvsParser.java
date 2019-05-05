@@ -88,6 +88,9 @@ public class cvsParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
+
+	int count = 0;
+
 	public cvsParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
@@ -138,6 +141,7 @@ public class cvsParser extends Parser {
 	}
 
 	public static class RowContext extends ParserRuleContext {
+		public int i = 1;
 		public List<FieldContext> field() {
 			return getRuleContexts(FieldContext.class);
 		}
@@ -165,35 +169,36 @@ public class cvsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(11);
+			_localctx.i++; System.out.println("当前第"+_localctx.i+"行");
+			setState(12);
 			field();
-			setState(16);
+			setState(17);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__0) {
 				{
 				{
-				setState(12);
-				match(T__0);
 				setState(13);
+				match(T__0);
+				setState(14);
 				field();
 				}
 				}
-				setState(18);
+				setState(19);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(20);
+			setState(21);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__1) {
 				{
-				setState(19);
+				setState(20);
 				match(T__1);
 				}
 			}
 
-			setState(22);
+			setState(23);
 			match(T__2);
 			}
 		}
@@ -236,21 +241,21 @@ public class cvsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(24);
+			setState(25);
 			field();
-			setState(29);
+			setState(30);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__0) {
 				{
 				{
-				setState(25);
-				match(T__0);
 				setState(26);
+				match(T__0);
+				setState(27);
 				field();
 				}
 				}
-				setState(31);
+				setState(32);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -289,7 +294,7 @@ public class cvsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(32);
+			setState(33);
 			match(ID);
 			 System.out.println("Found alpha: "+_localctx.getText()); 
 			}
@@ -306,16 +311,17 @@ public class cvsParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\6&\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\3\2\3\2\3\2\3\3\3\3\3\3\7\3\21\n\3\f\3\16\3\24\13\3"+
-		"\3\3\5\3\27\n\3\3\3\3\3\3\4\3\4\3\4\7\4\36\n\4\f\4\16\4!\13\4\3\5\3\5"+
-		"\3\5\3\5\2\2\6\2\4\6\b\2\2\2$\2\n\3\2\2\2\4\r\3\2\2\2\6\32\3\2\2\2\b\""+
-		"\3\2\2\2\n\13\5\4\3\2\13\f\5\6\4\2\f\3\3\2\2\2\r\22\5\b\5\2\16\17\7\3"+
-		"\2\2\17\21\5\b\5\2\20\16\3\2\2\2\21\24\3\2\2\2\22\20\3\2\2\2\22\23\3\2"+
-		"\2\2\23\26\3\2\2\2\24\22\3\2\2\2\25\27\7\4\2\2\26\25\3\2\2\2\26\27\3\2"+
-		"\2\2\27\30\3\2\2\2\30\31\7\5\2\2\31\5\3\2\2\2\32\37\5\b\5\2\33\34\7\3"+
-		"\2\2\34\36\5\b\5\2\35\33\3\2\2\2\36!\3\2\2\2\37\35\3\2\2\2\37 \3\2\2\2"+
-		" \7\3\2\2\2!\37\3\2\2\2\"#\7\6\2\2#$\b\5\1\2$\t\3\2\2\2\5\22\26\37";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\6\'\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\3\2\3\2\3\2\3\3\3\3\3\3\3\3\7\3\22\n\3\f\3\16\3\25"+
+		"\13\3\3\3\5\3\30\n\3\3\3\3\3\3\4\3\4\3\4\7\4\37\n\4\f\4\16\4\"\13\4\3"+
+		"\5\3\5\3\5\3\5\2\2\6\2\4\6\b\2\2\2%\2\n\3\2\2\2\4\r\3\2\2\2\6\33\3\2\2"+
+		"\2\b#\3\2\2\2\n\13\5\4\3\2\13\f\5\6\4\2\f\3\3\2\2\2\r\16\b\3\1\2\16\23"+
+		"\5\b\5\2\17\20\7\3\2\2\20\22\5\b\5\2\21\17\3\2\2\2\22\25\3\2\2\2\23\21"+
+		"\3\2\2\2\23\24\3\2\2\2\24\27\3\2\2\2\25\23\3\2\2\2\26\30\7\4\2\2\27\26"+
+		"\3\2\2\2\27\30\3\2\2\2\30\31\3\2\2\2\31\32\7\5\2\2\32\5\3\2\2\2\33 \5"+
+		"\b\5\2\34\35\7\3\2\2\35\37\5\b\5\2\36\34\3\2\2\2\37\"\3\2\2\2 \36\3\2"+
+		"\2\2 !\3\2\2\2!\7\3\2\2\2\" \3\2\2\2#$\7\6\2\2$%\b\5\1\2%\t\3\2\2\2\5"+
+		"\23\27 ";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
