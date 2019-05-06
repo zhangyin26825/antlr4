@@ -18,7 +18,9 @@ public class cvsBaseListener implements cvsListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFile(cvsParser.FileContext ctx) { }
+	@Override public void enterFile(cvsParser.FileContext ctx) {
+		System.out.println(ctx.getText());
+	}
 	/**
 	 * {@inheritDoc}
 	 *

@@ -1,4 +1,7 @@
 grammar cvs;
+options{
+    output=AST;
+}
 @header{
 package com.zhangyin.cvs;
 }
