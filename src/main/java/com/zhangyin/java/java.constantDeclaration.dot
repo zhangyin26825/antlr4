@@ -1,0 +1,27 @@
+digraph ATN {
+rankdir=LR;
+s209[fontsize=11, label="209", shape=doublecircle, fixedsize=true, width=.6];
+s208[fontsize=11,label="208", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1317[fontsize=11,label="1317", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1318[fontsize=11,label="&rarr;\n1318*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1319[fontsize=11,label="&larr;\n1319", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1320[fontsize=11,label="{1320*\nd=130|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s1321[fontsize=11,label="1321", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1322[fontsize=11,label="1322*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1323[fontsize=11,label="1323", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1324[fontsize=11,label="1324", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1325[fontsize=11,label="1325", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1326[fontsize=11,label="1326", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s208 -> s1320 [fontname="Times-Italic", label="&epsilon;"];
+s1320:p0 -> s1318 [fontname="Times-Italic", label="&epsilon;"];
+s1320:p1 -> s1321 [fontname="Times-Italic", label="&epsilon;"];
+s1318 -> s1317 [fontname="Times-Italic", label="&epsilon;"];
+s1321 -> s1323 [fontname="Times-Italic", label="&epsilon;"];
+s1317 -> s1319 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<constantModifier>", arrowhead = normal];
+s1323 -> s1324 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<unannType>", arrowhead = normal];
+s1319 -> s1322 [fontname="Times-Italic", label="&epsilon;"];
+s1324 -> s1325 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<variableDeclaratorList>", arrowhead = normal];
+s1322 -> s1320 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s1325 -> s1326 [fontsize=11, fontname="Courier", arrowsize=.7, label = "';'", arrowhead = normal];
+s1326 -> s209 [fontname="Times-Italic", label="&epsilon;"];
+}

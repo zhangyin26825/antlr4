@@ -1,0 +1,31 @@
+digraph ATN {
+rankdir=LR;
+s121[fontsize=11, label="121", shape=doublecircle, fixedsize=true, width=.6];
+s912[fontsize=11,label="912", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s913[fontsize=11,label="913", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s914[fontsize=11,label="{&rarr;\n914\nd=62|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s915[fontsize=11,label="&larr;\n915", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s916[fontsize=11,label="916", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s917[fontsize=11,label="917", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s918[fontsize=11,label="{&rarr;\n918*\nd=63|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s919[fontsize=11,label="&larr;\n919", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s120[fontsize=11,label="120", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s920[fontsize=11,label="{920*\nd=64|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s921[fontsize=11,label="921", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s922[fontsize=11,label="922*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s120 -> s914 [fontname="Times-Italic", label="&epsilon;"];
+s914:p0 -> s912 [fontname="Times-Italic", label="&epsilon;"];
+s914:p1 -> s913 [fontname="Times-Italic", label="&epsilon;"];
+s912 -> s915 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<unannClassType_lfno_unannClassOrInterfaceType>", arrowhead = normal];
+s913 -> s915 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<unannInterfaceType_lfno_unannClassOrInterfaceType>", arrowhead = normal];
+s915 -> s920 [fontname="Times-Italic", label="&epsilon;"];
+s920:p0 -> s918 [fontname="Times-Italic", label="&epsilon;"];
+s920:p1 -> s921 [fontname="Times-Italic", label="&epsilon;"];
+s918:p0 -> s916 [fontname="Times-Italic", label="&epsilon;"];
+s918:p1 -> s917 [fontname="Times-Italic", label="&epsilon;"];
+s921 -> s121 [fontname="Times-Italic", label="&epsilon;"];
+s916 -> s919 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<unannClassType_lf_unannClassOrInterfaceType>", arrowhead = normal];
+s917 -> s919 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<unannInterfaceType_lf_unannClassOrInterfaceType>", arrowhead = normal];
+s919 -> s922 [fontname="Times-Italic", label="&epsilon;"];
+s922 -> s920 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+}

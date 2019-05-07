@@ -1,0 +1,28 @@
+digraph ATN {
+rankdir=LR;
+s33[fontsize=11, label="33", shape=doublecircle, fixedsize=true, width=.6];
+s32[fontsize=11,label="32", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s608[fontsize=11,label="{608*\nd=22|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s609[fontsize=11,label="609", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s610[fontsize=11,label="610*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s611[fontsize=11,label="611", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s612[fontsize=11,label="612", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s613[fontsize=11,label="{&rarr;\n613\nd=23|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s614[fontsize=11,label="&larr;\n614", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s605[fontsize=11,label="605", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s606[fontsize=11,label="&rarr;\n606*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s607[fontsize=11,label="&larr;\n607", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s32 -> s608 [fontname="Times-Italic", label="&epsilon;"];
+s608:p0 -> s606 [fontname="Times-Italic", label="&epsilon;"];
+s608:p1 -> s609 [fontname="Times-Italic", label="&epsilon;"];
+s606 -> s605 [fontname="Times-Italic", label="&epsilon;"];
+s609 -> s611 [fontname="Times-Italic", label="&epsilon;"];
+s605 -> s607 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<typeParameterModifier>", arrowhead = normal];
+s611 -> s613 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s607 -> s610 [fontname="Times-Italic", label="&epsilon;"];
+s613:p0 -> s612 [fontname="Times-Italic", label="&epsilon;"];
+s613:p1 -> s614 [fontname="Times-Italic", label="&epsilon;"];
+s610 -> s608 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s612 -> s614 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<typeBound>", arrowhead = normal];
+s614 -> s33 [fontname="Times-Italic", label="&epsilon;"];
+}

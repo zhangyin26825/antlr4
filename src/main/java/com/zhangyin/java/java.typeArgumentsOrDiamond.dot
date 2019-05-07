@@ -1,0 +1,17 @@
+digraph ATN {
+rankdir=LR;
+s377[fontsize=11, label="377", shape=doublecircle, fixedsize=true, width=.6];
+s2192[fontsize=11,label="2192", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2193[fontsize=11,label="{&rarr;\n2193\nd=239|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s2194[fontsize=11,label="&larr;\n2194", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s376[fontsize=11,label="376", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2190[fontsize=11,label="2190", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2191[fontsize=11,label="2191", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s376 -> s2193 [fontname="Times-Italic", label="&epsilon;"];
+s2193:p0 -> s2190 [fontname="Times-Italic", label="&epsilon;"];
+s2193:p1 -> s2191 [fontname="Times-Italic", label="&epsilon;"];
+s2190 -> s2194 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<typeArguments>", arrowhead = normal];
+s2191 -> s2192 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'<'", arrowhead = normal];
+s2194 -> s377 [fontname="Times-Italic", label="&epsilon;"];
+s2192 -> s2194 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'>'", arrowhead = normal];
+}

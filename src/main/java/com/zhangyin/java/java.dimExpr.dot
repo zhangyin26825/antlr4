@@ -1,0 +1,27 @@
+digraph ATN {
+rankdir=LR;
+s409[fontsize=11, label="409", shape=doublecircle, fixedsize=true, width=.6];
+s2560[fontsize=11,label="&larr;\n2560", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2561[fontsize=11,label="{2561*\nd=290|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s2562[fontsize=11,label="2562", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2563[fontsize=11,label="2563*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2564[fontsize=11,label="2564", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2565[fontsize=11,label="2565", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2566[fontsize=11,label="2566", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2567[fontsize=11,label="2567", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s408[fontsize=11,label="408", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2558[fontsize=11,label="2558", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2559[fontsize=11,label="&rarr;\n2559*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s408 -> s2561 [fontname="Times-Italic", label="&epsilon;"];
+s2561:p0 -> s2559 [fontname="Times-Italic", label="&epsilon;"];
+s2561:p1 -> s2562 [fontname="Times-Italic", label="&epsilon;"];
+s2559 -> s2558 [fontname="Times-Italic", label="&epsilon;"];
+s2562 -> s2564 [fontname="Times-Italic", label="&epsilon;"];
+s2558 -> s2560 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<annotation>", arrowhead = normal];
+s2564 -> s2565 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'['", arrowhead = normal];
+s2560 -> s2563 [fontname="Times-Italic", label="&epsilon;"];
+s2565 -> s2566 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<expression>", arrowhead = normal];
+s2563 -> s2561 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s2566 -> s2567 [fontsize=11, fontname="Courier", arrowsize=.7, label = "']'", arrowhead = normal];
+s2567 -> s409 [fontname="Times-Italic", label="&epsilon;"];
+}

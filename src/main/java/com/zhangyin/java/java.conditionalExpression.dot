@@ -1,0 +1,25 @@
+digraph ATN {
+rankdir=LR;
+s431[fontsize=11, label="431", shape=doublecircle, fixedsize=true, width=.6];
+s2624[fontsize=11,label="{&rarr;\n2624\nd=298|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s2625[fontsize=11,label="&larr;\n2625", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2617[fontsize=11,label="2617", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2618[fontsize=11,label="2618", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2619[fontsize=11,label="2619", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2620[fontsize=11,label="2620", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2621[fontsize=11,label="2621", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s430[fontsize=11,label="430", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2622[fontsize=11,label="2622", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2623[fontsize=11,label="2623", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s430 -> s2624 [fontname="Times-Italic", label="&epsilon;"];
+s2624:p0 -> s2617 [fontname="Times-Italic", label="&epsilon;"];
+s2624:p1 -> s2618 [fontname="Times-Italic", label="&epsilon;"];
+s2617 -> s2625 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<conditionalOrExpression[0]>", arrowhead = normal];
+s2618 -> s2619 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<conditionalOrExpression[0]>", arrowhead = normal];
+s2625 -> s431 [fontname="Times-Italic", label="&epsilon;"];
+s2619 -> s2620 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'?'", arrowhead = normal];
+s2620 -> s2621 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<expression>", arrowhead = normal];
+s2621 -> s2622 [fontsize=11, fontname="Courier", arrowsize=.7, label = "':'", arrowhead = normal];
+s2622 -> s2623 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<conditionalExpression>", arrowhead = normal];
+s2623 -> s2625 [fontname="Times-Italic", label="&epsilon;"];
+}

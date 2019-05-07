@@ -1,0 +1,15 @@
+digraph ATN {
+rankdir=LR;
+s45[fontsize=11, label="45", shape=doublecircle, fixedsize=true, width=.6];
+s644[fontsize=11,label="644", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s645[fontsize=11,label="645", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s646[fontsize=11,label="{&rarr;\n646\nd=27|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s647[fontsize=11,label="&larr;\n647", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s44[fontsize=11,label="44", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s44 -> s646 [fontname="Times-Italic", label="&epsilon;"];
+s646:p0 -> s644 [fontname="Times-Italic", label="&epsilon;"];
+s646:p1 -> s645 [fontname="Times-Italic", label="&epsilon;"];
+s644 -> s647 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<referenceType>", arrowhead = normal];
+s645 -> s647 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<wildcard>", arrowhead = normal];
+s647 -> s45 [fontname="Times-Italic", label="&epsilon;"];
+}

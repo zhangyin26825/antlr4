@@ -1,0 +1,21 @@
+digraph ATN {
+rankdir=LR;
+s345[fontsize=11, label="345", shape=doublecircle, fixedsize=true, width=.6];
+s1824[fontsize=11,label="1824", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1825[fontsize=11,label="{&rarr;\n1825\nd=186|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s1826[fontsize=11,label="&larr;\n1826", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1827[fontsize=11,label="1827", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1828[fontsize=11,label="1828", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s344[fontsize=11,label="344", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1822[fontsize=11,label="1822", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1823[fontsize=11,label="1823", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s344 -> s1822 [fontname="Times-Italic", label="&epsilon;"];
+s1822 -> s1823 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'('", arrowhead = normal];
+s1823 -> s1825 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<resourceList>", arrowhead = normal];
+s1825:p0 -> s1824 [fontname="Times-Italic", label="&epsilon;"];
+s1825:p1 -> s1826 [fontname="Times-Italic", label="&epsilon;"];
+s1824 -> s1826 [fontsize=11, fontname="Courier", arrowsize=.7, label = "';'", arrowhead = normal];
+s1826 -> s1827 [fontname="Times-Italic", label="&epsilon;"];
+s1827 -> s1828 [fontsize=11, fontname="Courier", arrowsize=.7, label = "')'", arrowhead = normal];
+s1828 -> s345 [fontname="Times-Italic", label="&epsilon;"];
+}

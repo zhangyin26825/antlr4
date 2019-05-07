@@ -1,0 +1,21 @@
+digraph ATN {
+rankdir=LR;
+s69[fontsize=11, label="69", shape=doublecircle, fixedsize=true, width=.6];
+s68[fontsize=11,label="68", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s742[fontsize=11,label="742", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s743[fontsize=11,label="743", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s744[fontsize=11,label="744", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s745[fontsize=11,label="745", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s746[fontsize=11,label="{&rarr;\n746\nd=40|{<p0>|<p1>|<p2>|<p3>}}", shape=record, fixedsize=false, peripheries=1];
+s747[fontsize=11,label="&larr;\n747", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s68 -> s746 [fontname="Times-Italic", label="&epsilon;"];
+s746:p0 -> s742 [fontname="Times-Italic", label="&epsilon;"];
+s746:p1 -> s743 [fontname="Times-Italic", label="&epsilon;"];
+s746:p2 -> s744 [fontname="Times-Italic", label="&epsilon;"];
+s746:p3 -> s745 [fontname="Times-Italic", label="&epsilon;"];
+s742 -> s747 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<singleTypeImportDeclaration>", arrowhead = normal];
+s743 -> s747 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<typeImportOnDemandDeclaration>", arrowhead = normal];
+s744 -> s747 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<singleStaticImportDeclaration>", arrowhead = normal];
+s745 -> s747 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<staticImportOnDemandDeclaration>", arrowhead = normal];
+s747 -> s69 [fontname="Times-Italic", label="&epsilon;"];
+}

@@ -1,0 +1,18 @@
+digraph ATN {
+rankdir=LR;
+s229[fontsize=11, label="229", shape=doublecircle, fixedsize=true, width=.6];
+s228[fontsize=11,label="228", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1403[fontsize=11,label="1403", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1404[fontsize=11,label="1404", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1405[fontsize=11,label="1405", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1406[fontsize=11,label="{&rarr;\n1406\nd=141|{<p0>|<p1>|<p2>}}", shape=record, fixedsize=false, peripheries=1];
+s1407[fontsize=11,label="&larr;\n1407", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s228 -> s1406 [fontname="Times-Italic", label="&epsilon;"];
+s1406:p0 -> s1403 [fontname="Times-Italic", label="&epsilon;"];
+s1406:p1 -> s1404 [fontname="Times-Italic", label="&epsilon;"];
+s1406:p2 -> s1405 [fontname="Times-Italic", label="&epsilon;"];
+s1403 -> s1407 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<normalAnnotation>", arrowhead = normal];
+s1404 -> s1407 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<markerAnnotation>", arrowhead = normal];
+s1405 -> s1407 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<singleElementAnnotation>", arrowhead = normal];
+s1407 -> s229 [fontname="Times-Italic", label="&epsilon;"];
+}

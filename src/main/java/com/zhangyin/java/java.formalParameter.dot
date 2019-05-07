@@ -1,0 +1,25 @@
+digraph ATN {
+rankdir=LR;
+s153[fontsize=11, label="153", shape=doublecircle, fixedsize=true, width=.6];
+s1056[fontsize=11,label="&larr;\n1056", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1057[fontsize=11,label="{1057*\nd=86|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s1058[fontsize=11,label="1058", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1059[fontsize=11,label="1059*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1060[fontsize=11,label="1060", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1061[fontsize=11,label="1061", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1062[fontsize=11,label="1062", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s152[fontsize=11,label="152", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1054[fontsize=11,label="1054", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1055[fontsize=11,label="&rarr;\n1055*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s152 -> s1057 [fontname="Times-Italic", label="&epsilon;"];
+s1057:p0 -> s1055 [fontname="Times-Italic", label="&epsilon;"];
+s1057:p1 -> s1058 [fontname="Times-Italic", label="&epsilon;"];
+s1055 -> s1054 [fontname="Times-Italic", label="&epsilon;"];
+s1058 -> s1060 [fontname="Times-Italic", label="&epsilon;"];
+s1054 -> s1056 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<variableModifier>", arrowhead = normal];
+s1060 -> s1061 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<unannType>", arrowhead = normal];
+s1056 -> s1059 [fontname="Times-Italic", label="&epsilon;"];
+s1061 -> s1062 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<variableDeclaratorId>", arrowhead = normal];
+s1059 -> s1057 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s1062 -> s153 [fontname="Times-Italic", label="&epsilon;"];
+}

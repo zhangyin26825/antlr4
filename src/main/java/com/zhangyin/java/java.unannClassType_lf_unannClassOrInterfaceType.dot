@@ -1,0 +1,30 @@
+digraph ATN {
+rankdir=LR;
+s125[fontsize=11, label="125", shape=doublecircle, fixedsize=true, width=.6];
+s941[fontsize=11,label="941", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s942[fontsize=11,label="942", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s943[fontsize=11,label="&rarr;\n943*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s944[fontsize=11,label="&larr;\n944", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s945[fontsize=11,label="{945*\nd=69|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s946[fontsize=11,label="946", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s947[fontsize=11,label="947*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s948[fontsize=11,label="948", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s949[fontsize=11,label="949", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s950[fontsize=11,label="{&rarr;\n950\nd=70|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s951[fontsize=11,label="&larr;\n951", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s124[fontsize=11,label="124", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s124 -> s941 [fontname="Times-Italic", label="&epsilon;"];
+s941 -> s945 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'.'", arrowhead = normal];
+s945:p0 -> s943 [fontname="Times-Italic", label="&epsilon;"];
+s945:p1 -> s946 [fontname="Times-Italic", label="&epsilon;"];
+s943 -> s942 [fontname="Times-Italic", label="&epsilon;"];
+s946 -> s948 [fontname="Times-Italic", label="&epsilon;"];
+s942 -> s944 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<annotation>", arrowhead = normal];
+s948 -> s950 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s944 -> s947 [fontname="Times-Italic", label="&epsilon;"];
+s950:p0 -> s949 [fontname="Times-Italic", label="&epsilon;"];
+s950:p1 -> s951 [fontname="Times-Italic", label="&epsilon;"];
+s947 -> s945 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s949 -> s951 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<typeArguments>", arrowhead = normal];
+s951 -> s125 [fontname="Times-Italic", label="&epsilon;"];
+}

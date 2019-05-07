@@ -1,0 +1,19 @@
+digraph ATN {
+rankdir=LR;
+s401[fontsize=11, label="401", shape=doublecircle, fixedsize=true, width=.6];
+s400[fontsize=11,label="400", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2480[fontsize=11,label="2480", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2481[fontsize=11,label="{&rarr;\n2481\nd=279|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s2482[fontsize=11,label="&larr;\n2482", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2483[fontsize=11,label="2483", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2484[fontsize=11,label="2484", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s2479[fontsize=11,label="2479", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s400 -> s2479 [fontname="Times-Italic", label="&epsilon;"];
+s2479 -> s2481 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'::'", arrowhead = normal];
+s2481:p0 -> s2480 [fontname="Times-Italic", label="&epsilon;"];
+s2481:p1 -> s2482 [fontname="Times-Italic", label="&epsilon;"];
+s2480 -> s2482 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<typeArguments>", arrowhead = normal];
+s2482 -> s2483 [fontname="Times-Italic", label="&epsilon;"];
+s2483 -> s2484 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s2484 -> s401 [fontname="Times-Italic", label="&epsilon;"];
+}

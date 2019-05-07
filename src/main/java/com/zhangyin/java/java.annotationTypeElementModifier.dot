@@ -1,0 +1,18 @@
+digraph ATN {
+rankdir=LR;
+s225[fontsize=11, label="225", shape=doublecircle, fixedsize=true, width=.6];
+s224[fontsize=11,label="224", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1395[fontsize=11,label="1395", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1396[fontsize=11,label="1396", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1397[fontsize=11,label="1397", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1398[fontsize=11,label="{&rarr;\n1398\nd=140|{<p0>|<p1>|<p2>}}", shape=record, fixedsize=false, peripheries=1];
+s1399[fontsize=11,label="&larr;\n1399", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s224 -> s1398 [fontname="Times-Italic", label="&epsilon;"];
+s1398:p0 -> s1395 [fontname="Times-Italic", label="&epsilon;"];
+s1398:p1 -> s1396 [fontname="Times-Italic", label="&epsilon;"];
+s1398:p2 -> s1397 [fontname="Times-Italic", label="&epsilon;"];
+s1395 -> s1399 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<annotation>", arrowhead = normal];
+s1396 -> s1399 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'public'", arrowhead = normal];
+s1397 -> s1399 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'abstract'", arrowhead = normal];
+s1399 -> s225 [fontname="Times-Italic", label="&epsilon;"];
+}

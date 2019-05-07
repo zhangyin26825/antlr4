@@ -1,0 +1,21 @@
+digraph ATN {
+rankdir=LR;
+s211[fontsize=11, label="211", shape=doublecircle, fixedsize=true, width=.6];
+s1328[fontsize=11,label="1328", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1329[fontsize=11,label="1329", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s210[fontsize=11,label="210", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1330[fontsize=11,label="1330", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1331[fontsize=11,label="{&rarr;\n1331\nd=131|{<p0>|<p1>|<p2>|<p3>}}", shape=record, fixedsize=false, peripheries=1];
+s1332[fontsize=11,label="&larr;\n1332", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1327[fontsize=11,label="1327", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s210 -> s1331 [fontname="Times-Italic", label="&epsilon;"];
+s1331:p0 -> s1327 [fontname="Times-Italic", label="&epsilon;"];
+s1331:p1 -> s1328 [fontname="Times-Italic", label="&epsilon;"];
+s1331:p2 -> s1329 [fontname="Times-Italic", label="&epsilon;"];
+s1331:p3 -> s1330 [fontname="Times-Italic", label="&epsilon;"];
+s1327 -> s1332 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<annotation>", arrowhead = normal];
+s1328 -> s1332 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'public'", arrowhead = normal];
+s1329 -> s1332 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'static'", arrowhead = normal];
+s1330 -> s1332 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'final'", arrowhead = normal];
+s1332 -> s211 [fontname="Times-Italic", label="&epsilon;"];
+}

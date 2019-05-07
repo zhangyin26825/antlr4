@@ -1,0 +1,21 @@
+digraph ATN {
+rankdir=LR;
+s53[fontsize=11, label="53", shape=doublecircle, fixedsize=true, width=.6];
+s675[fontsize=11,label="675", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s52[fontsize=11,label="52", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s676[fontsize=11,label="676", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s677[fontsize=11,label="677", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s678[fontsize=11,label="678", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s679[fontsize=11,label="679", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s680[fontsize=11,label="{&rarr;\n680\nd=32|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s681[fontsize=11,label="&larr;\n681", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s52 -> s680 [fontname="Times-Italic", label="&epsilon;"];
+s680:p0 -> s675 [fontname="Times-Italic", label="&epsilon;"];
+s680:p1 -> s676 [fontname="Times-Italic", label="&epsilon;"];
+s675 -> s681 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s676 -> s677 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<packageOrTypeName[0]>", arrowhead = normal];
+s681 -> s53 [fontname="Times-Italic", label="&epsilon;"];
+s677 -> s678 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'.'", arrowhead = normal];
+s678 -> s679 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s679 -> s681 [fontname="Times-Italic", label="&epsilon;"];
+}

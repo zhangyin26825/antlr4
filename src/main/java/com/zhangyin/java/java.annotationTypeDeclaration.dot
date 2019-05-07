@@ -1,0 +1,29 @@
+digraph ATN {
+rankdir=LR;
+s217[fontsize=11, label="217", shape=doublecircle, fixedsize=true, width=.6];
+s1350[fontsize=11,label="1350", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1351[fontsize=11,label="&rarr;\n1351*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1352[fontsize=11,label="&larr;\n1352", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1353[fontsize=11,label="{1353*\nd=134|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s1354[fontsize=11,label="1354", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1355[fontsize=11,label="1355*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1356[fontsize=11,label="1356", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1357[fontsize=11,label="1357", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1358[fontsize=11,label="1358", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1359[fontsize=11,label="1359", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1360[fontsize=11,label="1360", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s216[fontsize=11,label="216", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s216 -> s1353 [fontname="Times-Italic", label="&epsilon;"];
+s1353:p0 -> s1351 [fontname="Times-Italic", label="&epsilon;"];
+s1353:p1 -> s1354 [fontname="Times-Italic", label="&epsilon;"];
+s1351 -> s1350 [fontname="Times-Italic", label="&epsilon;"];
+s1354 -> s1356 [fontname="Times-Italic", label="&epsilon;"];
+s1350 -> s1352 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<interfaceModifier>", arrowhead = normal];
+s1356 -> s1357 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'@'", arrowhead = normal];
+s1352 -> s1355 [fontname="Times-Italic", label="&epsilon;"];
+s1357 -> s1358 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'interface'", arrowhead = normal];
+s1355 -> s1353 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s1358 -> s1359 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s1359 -> s1360 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<annotationTypeBody>", arrowhead = normal];
+s1360 -> s217 [fontname="Times-Italic", label="&epsilon;"];
+}

@@ -55,8 +55,12 @@
 					</execution>
 				</executions>
                 <configuration>
-                    <atn>true</atn>
+                    <!--<atn>true</atn>-->
                     <visitor>true</visitor>
+					<listener>false</listener>
+					<!--<options>-->
+
+					<!--</options>-->
                     <!--<sourceDirectory>${basedir}/src/main/antlr4</sourceDirectory>-->
                     <!--<outputDirectory>${basedir}/src/main/java/com/zhangyin/cvs</outputDirectory>-->
                 </configuration>

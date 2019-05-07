@@ -1,0 +1,25 @@
+digraph ATN {
+rankdir=LR;
+s97[fontsize=11, label="97", shape=doublecircle, fixedsize=true, width=.6];
+s96[fontsize=11,label="96", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s836[fontsize=11,label="836", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s837[fontsize=11,label="837", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s838[fontsize=11,label="&rarr;\n838*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s839[fontsize=11,label="&larr;\n839", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s840[fontsize=11,label="{840*\nd=50|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s841[fontsize=11,label="841", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s842[fontsize=11,label="842*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s843[fontsize=11,label="843", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s844[fontsize=11,label="844", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s96 -> s836 [fontname="Times-Italic", label="&epsilon;"];
+s836 -> s840 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'{'", arrowhead = normal];
+s840:p0 -> s838 [fontname="Times-Italic", label="&epsilon;"];
+s840:p1 -> s841 [fontname="Times-Italic", label="&epsilon;"];
+s838 -> s837 [fontname="Times-Italic", label="&epsilon;"];
+s841 -> s843 [fontname="Times-Italic", label="&epsilon;"];
+s837 -> s839 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<classBodyDeclaration>", arrowhead = normal];
+s843 -> s844 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'}'", arrowhead = normal];
+s839 -> s842 [fontname="Times-Italic", label="&epsilon;"];
+s844 -> s97 [fontname="Times-Italic", label="&epsilon;"];
+s842 -> s840 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+}

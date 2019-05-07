@@ -1,0 +1,29 @@
+digraph ATN {
+rankdir=LR;
+s51[fontsize=11, label="51", shape=doublecircle, fixedsize=true, width=.6];
+s672[fontsize=11,label="{672*\nd=31|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s673[fontsize=11,label="673", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s674[fontsize=11,label="674*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s50[fontsize=11,label="50", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s664[fontsize=11,label="664", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s665[fontsize=11,label="665", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s666[fontsize=11,label="666", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s667[fontsize=11,label="667", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s668[fontsize=11,label="668", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s669[fontsize=11,label="669", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s670[fontsize=11,label="&rarr;\n670*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s671[fontsize=11,label="&larr;\n671", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s50 -> s664 [fontname="Times-Italic", label="&epsilon;"];
+s664 -> s665 [fontsize=11, fontname="Courier", arrowsize=.7, label = "action_25:-1", arrowhead = normal];
+s665 -> s666 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s666 -> s672 [fontname="Times-Italic", label="&epsilon;"];
+s672:p0 -> s670 [fontname="Times-Italic", label="&epsilon;"];
+s672:p1 -> s673 [fontname="Times-Italic", label="&epsilon;"];
+s670 -> s667 [fontname="Times-Italic", label="&epsilon;"];
+s673 -> s51 [fontname="Times-Italic", label="&epsilon;"];
+s667 -> s668 [fontsize=11, fontname="Courier", arrowsize=.7, label = "1 >= _p", arrowhead = normal];
+s668 -> s669 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'.'", arrowhead = normal];
+s669 -> s671 [fontsize=11, fontname="Courier", arrowsize=.7, label = "Identifier", arrowhead = normal];
+s671 -> s674 [fontname="Times-Italic", label="&epsilon;"];
+s674 -> s672 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+}
