@@ -22,7 +22,8 @@ import java.util.Map;
 public class CalcTest {
 
     public static void main(String[] args) {
-        String filepath = "min(3,negate(a+3))";
+
+        String filepath = "min(-5,negate(max(a+3,-5)))";
         CharStream charStream = CharStreams.fromString(filepath);
         CalcLexer lexer = new CalcLexer(charStream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
