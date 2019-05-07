@@ -31,7 +31,7 @@ SUB : '-';
 MUL : '*';
 DIV : '/';
 ID  : [a-zA-Z$_]+;
-NUM :  NonZeroDigit Digit*  ('.'  Digit*)?;
+NUM :  SUB?  NonZeroDigit Digit*  ('.'  Digit*)?;
 WS  :  [ \t\r\n\u000C]+ -> skip
     ;
 fragment

@@ -5,7 +5,7 @@ import com.zhangyin.calc.CalcLexer;
 import com.zhangyin.calc.CalcParser;
 import com.zhangyin.calc.CalcVisitor;
 import com.zhangyin.calc.function.Function;
-import com.zhangyin.calc.function.impl.ParamSizeFunction;
+import com.zhangyin.calc.function.Functions;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -22,8 +22,7 @@ import java.util.Map;
 public class CalcTest {
 
     public static void main(String[] args) {
-
-        String filepath = "test(3,a+3)";
+        String filepath = "min(3,negate(a+3))";
         CharStream charStream = CharStreams.fromString(filepath);
         CalcLexer lexer = new CalcLexer(charStream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -31,8 +30,7 @@ public class CalcTest {
         ParseTree tree = parser.expr();
         Map<String,BigDecimal> variableMap=new HashMap<>();
         variableMap.put("a",BigDecimal.ONE);
-        Map<String, Function> functionMap=new HashMap<>();
-        functionMap.put("test",new ParamSizeFunction());
+        Map<String, Function> functionMap = Functions.getFunctionMap();
         CalcVisitor calcVisitor=new CalcBaseVisitor(variableMap,functionMap);
         Object visit = calcVisitor.visit(tree);
         System.out.println(visit);

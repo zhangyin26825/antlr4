@@ -93,10 +93,11 @@ public class CalcBaseVisitor<T extends Object> extends AbstractParseTreeVisitor<
 	@Override public Object visitInvokeFunction(CalcParser.InvokeFunctionContext ctx) {
 		String functionName = ctx.function().getText();
 		List<CalcParser.ExprContext> expr = ctx.paramList().expr();
-		List<BigDecimal> param=new ArrayList<>(expr.size());
+		BigDecimal[] param=new BigDecimal[expr.size()];
+		int i=0;
 		for (CalcParser.ExprContext exprContext : expr) {
 			BigDecimal accept = (BigDecimal)exprContext.accept(this);
-			param.add(accept);
+			param[i++]=accept;
 		}
 		Function function = functionMap.get(functionName);
 		return function.invoke(param);
